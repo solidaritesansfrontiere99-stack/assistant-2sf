@@ -10,13 +10,13 @@ st.set_page_config(page_title="Assistant 2SF", page_icon="🌍")
 # Masquer GitHub et le bouton Gérer, tout en gardant le bouton du logo
 St.markdown("""
     <style>
-    /* Garder le bouton du menu à gauche mais cacher GitHub à droite */
-    .stAppHeader {background-color: rgba(0,0,0,0);}
-    .stAppHeader > div:first-child {display:none;}
+    /* Masquer la partie droite du header (GitHub, Share, etc.) */
+    .stAppHeader > div:last-child {display:none;}
     
-    /* Cacher le bouton "Gérer l'application" et le pied de page */
+    /* Masquer le bouton "Gérer l'application" en bas à droite */
     .stAppDeployButton {display:none;}
-    [data-testid="bundle_viewer_toolbar"] {display:none;}
+    
+    /* Masquer le pied de page Streamlit */
     footer {visibility: hidden;}
     </style>
 """, unsafe_allow_html=True)
