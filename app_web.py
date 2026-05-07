@@ -2,7 +2,7 @@ import streamlit as st
 from groq import Groq
 
 # 1. Connexion sécurisée
-Client = Groq(api_key=st.secrets["GROQ_API_KEY"])
+client = Groq(api_key=st.secrets["GROQ_API_KEY"])
 MODELE_IA = "llama-3.1-8b-instant"
 
 # 2. Configuration de la page
