@@ -7,15 +7,19 @@ MODELE_IA = "llama-3.1-8b-instant"
 
 # 2. Configuration de la page
 st.set_page_config(page_title="Assistant 2SF", page_icon="🌍")
-# Masquer l'icône GitHub et le menu Streamlit
-hide_st_style = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            header {visibility: hidden;}
-            </style>
-            """
-st.markdown(hide_st_style, unsafe_allow_html=True)
+# Masquer GitHub et le bouton Gérer, tout en gardant le bouton du logo
+St.markdown("""
+    <style>
+    /* Garder le bouton du menu à gauche mais cacher GitHub à droite */
+    .stAppHeader {background-color: rgba(0,0,0,0);}
+    .stAppHeader > div:first-child {display:none;}
+    
+    /* Cacher le bouton "Gérer l'application" et le pied de page */
+    .stAppDeployButton {display:none;}
+    [data-testid="bundle_viewer_toolbar"] {display:none;}
+    footer {visibility: hidden;}
+    </style>
+""", unsafe_allow_html=True)
 # Barre latérale avec TON LOGO officiel
 with st.sidebar:
     # Utilisation du lien que tu as fourni
