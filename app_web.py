@@ -19,11 +19,11 @@ st.markdown("""
 
 # Barre latérale avec TON LOGO officiel
 with st.sidebar:
-    # Lien direct de ton image
+    # URL directe du logo
     logo_url = "https://ong-2sf.org/wp-content/uploads/2025/08/cropped-Logo-Romaric-SWB-04-jrjr.png"
     
-    # Correction ici : On retire "stretch" qui faisait bugger l'affichage
-    st.image(logo_url, use_container_width=True)
+    # Affichage simple et efficace
+    st.image(logo_url, use_column_width=True)
     
     st.title("ONG 2SF")
     st.markdown("---")
