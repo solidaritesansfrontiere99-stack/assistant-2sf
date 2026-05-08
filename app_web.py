@@ -8,7 +8,7 @@ MODELE_IA = "llama-3.1-8b-instant"
 # 2. Configuration de la page
 st.set_page_config(page_title="Assistant 2SF", page_icon="🌍")
 
-# Masquer les boutons GitHub et Gérer (CORRIGÉ ICI)
+# Masquer les boutons GitHub et Gérer
 st.markdown("""
     <style>
     .stAppHeader > div:last-child {display:none;}
@@ -19,8 +19,11 @@ st.markdown("""
 
 # Barre latérale avec TON LOGO officiel
 with st.sidebar:
+    # Lien direct de ton image
     logo_url = "https://ong-2sf.org/wp-content/uploads/2025/08/cropped-Logo-Romaric-SWB-04-jrjr.png"
-    st.image(logo_url)
+    
+    # Correction ici : On retire "stretch" qui faisait bugger l'affichage
+    st.image(logo_url, use_container_width=True)
     
     st.title("ONG 2SF")
     st.markdown("---")
