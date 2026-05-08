@@ -7,19 +7,20 @@ MODELE_IA = "llama-3.1-8b-instant"
 
 # 2. Configuration de la page
 st.set_page_config(page_title="Assistant 2SF", page_icon="🌍")
-# Masquer les boutons GitHub et Gérer
-St.markdown("""
+
+# Masquer les boutons GitHub et Gérer (CORRIGÉ ICI)
+st.markdown("""
     <style>
     .stAppHeader > div:last-child {display:none;}
     .stAppDeployButton {display:none;}
     footer {visibility: hidden;}
     </style>
 """, unsafe_allow_html=True)
+
 # Barre latérale avec TON LOGO officiel
 with st.sidebar:
-    # Utilisation du lien que tu as fourni
     logo_url = "https://ong-2sf.org/wp-content/uploads/2025/08/cropped-Logo-Romaric-SWB-04-jrjr.png"
-    st.image(logo_url, width="stretch")
+    st.image(logo_url)
     
     st.title("ONG 2SF")
     st.markdown("---")
@@ -49,7 +50,6 @@ if prompt := st.chat_input("Comment l'ONG 2SF peut-elle vous aider ?"):
 
     try:
         with st.chat_message("assistant"):
-            # Instructions ultra-précises basées sur le web et tes besoins
             instructions = """
             Tu es l'assistant expert de l'ONG 'Solidarité Sans Frontière' (2SF).
             
