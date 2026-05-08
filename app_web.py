@@ -7,7 +7,7 @@ MODELE_IA = "llama-3.1-8b-instant"
 
 # 2. Configuration de la page
 st.set_page_config(page_title="Assistant 2SF", page_icon="🌍")
-# Masquer GitHub et Gérer, mais garder le logo
+# Masquer les boutons GitHub et Gérer
 St.markdown("""
     <style>
     .stAppHeader > div:last-child {display:none;}
