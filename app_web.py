@@ -7,16 +7,11 @@ MODELE_IA = "llama-3.1-8b-instant"
 
 # 2. Configuration de la page
 st.set_page_config(page_title="Assistant 2SF", page_icon="🌍")
-# Masquer GitHub et le bouton Gérer, tout en gardant le bouton du logo
+# Masquer GitHub et Gérer, mais garder le logo
 St.markdown("""
     <style>
-    /* Masquer la partie droite du header (GitHub, Share, etc.) */
     .stAppHeader > div:last-child {display:none;}
-    
-    /* Masquer le bouton "Gérer l'application" en bas à droite */
     .stAppDeployButton {display:none;}
-    
-    /* Masquer le pied de page Streamlit */
     footer {visibility: hidden;}
     </style>
 """, unsafe_allow_html=True)
